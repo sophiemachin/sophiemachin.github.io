@@ -13,6 +13,12 @@ cd to the project, and create a new branch for the source code to live.
 
 git checkout -b source
 
+Then from the source branch
+
+ 	npm install gh-pages
+ 	npm run deploy
+
+
 
 ## Explanations
 
