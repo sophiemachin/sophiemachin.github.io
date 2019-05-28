@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { GridList, GridListTile } from '@material-ui/core'
+import { GridList, GridListTile, GridListTileBar } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 
 import breakfast from './images/breakfast.jpg'
@@ -25,13 +25,15 @@ const useStyles = makeStyles(theme => ({
 const tileData = [
   {
     img: breakfast,
-    title: 'Image',
+    title: 'Data visualisation',
     author: 'author',
+    language: 'React',
     cols: 2,
   }, {
     img: burgers,
-    title: 'Image',
+    title: 'Project Euler',
     author: 'author',
+    language: 'C++',
     cols: 2,
   },
 ];
@@ -50,6 +52,10 @@ function App() {
         {tileData.map(tile => (
           <GridListTile key={tile.img} cols={tile.cols || 1}>
             <img src={tile.img} alt={tile.title} />
+            <GridListTileBar
+              title={tile.title}
+              subtitle={<span>{tile.language}</span>}
+            />
           </GridListTile>
         ))}
       </GridList>
