@@ -8,7 +8,7 @@ import breakfast from './images/breakfast.jpg'
 import burgers from './images/burgers.jpg'
 
 import {
-  Grid, Card, CardHeader, CardMedia, Typography as T
+  Grid, Card, CardHeader, CardMedia,
 } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
@@ -32,12 +32,17 @@ const tileData = [
   {
     img: breakfast,
     title: 'Data visualisation',
-    language: 'React',
+    language: 'React, Plotly, Django',
     cols: 2,
   }, {
     img: burgers,
     title: 'Image Processing',
-    language: 'MATLAB',
+    language: 'MATLAB and Octave',
+    cols: 2,
+  }, {
+  img: burgers,
+    title: 'Front End',
+    language: 'React',
     cols: 2,
   }, {
     img: burgers,
@@ -53,9 +58,6 @@ function App() {
 
   return (
     <div className="App">
-
-        <T variant="h3">Sophie Machin's portfolio</T>
-
         <Grid container spacing={3} className={classes.grid}>
 
           {tileData.map(tile => (
