@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 
-
 import { makeStyles } from '@material-ui/core/styles';
 
 import burgers from './images/burgers.jpg'
@@ -36,21 +35,25 @@ const tileData = [
     title: 'Data visualisation',
     language: 'React, Plotly, Django',
     cols: 2,
+    href: 'data',
   }, {
     img: matlab,
     title: 'Image Processing',
     language: 'MATLAB and Octave',
     cols: 2,
+    href: 'images',
   }, {
     img: react,
     title: 'Front End',
     language: 'React',
     cols: 2,
+    href: 'frontend',
   }, {
     img: burgers,
     title: 'Puzzles',
     language: 'C++ and Python',
     cols: 2,
+    href: 'puzzles',
   }
 ];
 
@@ -66,11 +69,15 @@ function App() {
           <Grid item xs={12} sm={6}>
             <Card className={classes.card}>
               <CardHeader title={tile.title} subheader={tile.language}/>
+              <a href={tile.href}>
               <CardMedia
                 className={classes.media}
                 image={tile.img}
               />
+              </a>
+
             </Card>
+
           </Grid>
         ))}
 
