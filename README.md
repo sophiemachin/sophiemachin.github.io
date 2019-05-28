@@ -1,6 +1,8 @@
 
 # Creating a GitHub create-react-app User page
 
+Live site is here https://sophiemachin.github.io/
+
 ## Instructions
 
 On GitHub, create a repository with the name <username>.github.io
