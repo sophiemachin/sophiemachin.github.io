@@ -7,8 +7,9 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import AppBarDrawer from './AppBarDrawer'
 
 
-const Users = () => <h1>Users</h1>
-const Contact = () => <h1>Contact</h1>
+const DataVis = () => <h1>Data Visualisation</h1>
+const Images = () => <h1>Image Processing</h1>
+const FrontEnd = () => <h1>Front End</h1>
 const Notfound = () => <h1>Not found</h1>
 
 const routing = (
@@ -18,8 +19,9 @@ const routing = (
   <Router>
     <Switch>
       <Route path="/" exact component={App} />
-      <Route path="/users" exact component={Users} />
-      <Route path="/contact" exact component={Contact} />
+      <Route path="/data" exact component={DataVis} />
+      <Route path="/images" exact component={Images} />
+      <Route path="/frontend" exact component={FrontEnd} />
       <Route component={Notfound} />
     </Switch>
   </Router>
