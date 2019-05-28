@@ -3,7 +3,7 @@
 
 Live site is here https://sophiemachin.github.io/
 
-## Instructions
+## Setup Instructions
 
 On GitHub, create a repository with the name <username>.github.io
 
@@ -13,16 +13,37 @@ Get the URL to clone, and create a local respository, for example
 
 cd to the project, and create a new branch for the source code to live. 
 
-git checkout -b source
+    git checkout -b source
 
 Then from the source branch
 
  	npm install gh-pages
+
+## Deployment
+
+When you are ready to deploy, run this command from the source branch
+
  	npm run deploy
 
- Visit https://<username>.github.io/ to see the live page. 
+ Visit https://<username>.github.io/ to see the live page.
 
 
+## Development
+
+Once the initial setup is working, development can be done locally from the source branch using
+
+    npm start
+
+This builds a local version which automatically refreshes when any of the src 
+files are updated. 
+
+Commit and push as required.
+
+Run 
+
+    npm run deploy
+
+To make the app live. 
 
 ## Explanations
 
