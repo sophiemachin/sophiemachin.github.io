@@ -4,8 +4,10 @@ import './App.css';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import breakfast from './images/breakfast.jpg'
 import burgers from './images/burgers.jpg'
+import react from './images/react.png'
+import plotly from './images/plotly.png'
+import matlab from './images/matlab.jpg'
 
 import {
   Grid, Card, CardHeader, CardMedia,
@@ -30,17 +32,17 @@ const useStyles = makeStyles(theme => ({
 
 const tileData = [
   {
-    img: breakfast,
+    img: plotly,
     title: 'Data visualisation',
     language: 'React, Plotly, Django',
     cols: 2,
   }, {
-    img: burgers,
+    img: matlab,
     title: 'Image Processing',
     language: 'MATLAB and Octave',
     cols: 2,
   }, {
-  img: burgers,
+    img: react,
     title: 'Front End',
     language: 'React',
     cols: 2,
