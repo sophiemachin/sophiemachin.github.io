@@ -75,7 +75,7 @@ Run
 
     npm run deploy
 
-To make the app live. 
+to make the app live
 
 
 
