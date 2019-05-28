@@ -35,25 +35,25 @@ const tileData = [
     title: 'Data visualisation',
     language: 'React, Plotly, Django',
     cols: 2,
-    href: 'data',
+    href: '/#/data',
   }, {
     img: matlab,
     title: 'Image Processing',
     language: 'MATLAB and Octave',
     cols: 2,
-    href: 'images',
+    href: '/#/images',
   }, {
     img: react,
     title: 'Front End',
     language: 'React',
     cols: 2,
-    href: 'frontend',
+    href: '/#/frontend',
   }, {
     img: burgers,
     title: 'Puzzles',
     language: 'C++ and Python',
     cols: 2,
-    href: 'puzzles',
+    href: '/#/puzzles',
   }
 ];
 
