@@ -1,41 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import { GridList, GridListTile, GridListTileBar } from '@material-ui/core'
+
 import { makeStyles } from '@material-ui/core/styles';
 
 import breakfast from './images/breakfast.jpg'
 import burgers from './images/burgers.jpg'
 
+import {
+  Grid, Card, CardHeader, CardMedia, Typography as T
+} from '@material-ui/core'
+
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
+
+  grid : {
+    padding: theme.spacing(4)
   },
-  gridList: {
-    width: 500,
-    height: 450,
+  card: {
+    margin: theme.spacing(1),
+    textAlign: 'center',
+
   },
+  media: {
+    height: 0,
+    paddingTop: '56.25%', // 16:9
+  },
+
 }))
 
 const tileData = [
   {
     img: breakfast,
     title: 'Data visualisation',
-    author: 'author',
     language: 'React',
     cols: 2,
   }, {
     img: burgers,
-    title: 'Project Euler',
-    author: 'author',
-    language: 'C++',
+    title: 'Image Processing',
+    language: 'MATLAB',
     cols: 2,
-  },
+  }, {
+    img: burgers,
+    title: 'Puzzles',
+    language: 'C++ and Python',
+    cols: 2,
+  }
 ];
 
 function App() {
@@ -44,22 +53,24 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Sophie Machin's portfolio</p>
 
-        <GridList cellHeight={160} className={classes.gridList} cols={4}>
-        {tileData.map(tile => (
-          <GridListTile key={tile.img} cols={tile.cols || 1}>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              subtitle={<span>{tile.language}</span>}
-            />
-          </GridListTile>
+        <T variant="h3">Sophie Machin's portfolio</T>
+
+        <Grid container spacing={3} className={classes.grid}>
+
+          {tileData.map(tile => (
+          <Grid item xs={12} sm={6}>
+            <Card className={classes.card}>
+              <CardHeader title={tile.title} subheader={tile.language}/>
+              <CardMedia
+                className={classes.media}
+                image={tile.img}
+              />
+            </Card>
+          </Grid>
         ))}
-      </GridList>
-      </header>
+
+        </Grid>
 
     </div>
   );
