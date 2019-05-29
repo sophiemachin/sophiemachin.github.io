@@ -13,7 +13,7 @@ const FrontEnd = () => <h1>Front End</h1>
 const Notfound = () => <h1>Not found</h1>
 
 const routing = (
-  <div style={{'margin-top': '100px'}}>
+  <div style={{'marginTop': '100px'}}>
   <AppBarDrawer />
 
   <Router>
@@ -27,6 +27,7 @@ const routing = (
   </Router>
   </div>
 )
+
 
 ReactDOM.render(routing, document.getElementById('root'));
 
