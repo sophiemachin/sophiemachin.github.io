@@ -9,7 +9,7 @@ import plotly from './images/plotly.png'
 import matlab from './images/matlab.jpg'
 
 import {
-  Grid, Card, CardHeader, CardMedia,
+  Grid, Card, CardHeader, CardMedia, CardActionArea
 } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
@@ -66,8 +66,9 @@ function App() {
         <Grid container spacing={3} className={classes.grid}>
 
           {tileData.map(tile => (
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} key={tile.href}>
             <Card className={classes.card}>
+            <CardActionArea>
               <CardHeader title={tile.title} subheader={tile.language}/>
               <a href={tile.href}>
               <CardMedia
@@ -75,6 +76,7 @@ function App() {
                 image={tile.img}
               />
               </a>
+              </CardActionArea>
 
             </Card>
 
