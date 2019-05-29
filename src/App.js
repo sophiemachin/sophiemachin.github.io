@@ -26,6 +26,10 @@ const useStyles = makeStyles(theme => ({
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
+  link : {
+    textDecoration: 'none',
+    color: theme.palette.text.primary,
+  }
 
 }))
 
@@ -69,8 +73,9 @@ function App() {
           <Grid item xs={12} sm={6} key={tile.href}>
             <Card className={classes.card}>
             <CardActionArea>
+            <a href={tile.href} className={classes.link}>
               <CardHeader title={tile.title} subheader={tile.language}/>
-              <a href={tile.href}>
+              
               <CardMedia
                 className={classes.media}
                 image={tile.img}
