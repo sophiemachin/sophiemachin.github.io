@@ -90,7 +90,7 @@ const useStyles = makeStyles(theme => ({
 function AppBarDrawer() {
   const classes = useStyles();
   const theme = useTheme();
-  console.log(theme)
+
   const [open, setOpen] = React.useState(false);
 
   function handleDrawerOpen() {
