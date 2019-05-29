@@ -3,11 +3,12 @@ import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
   AppBar, Toolbar, Drawer, List, ListItem, ListItemIcon, ListItemText,
-  Typography as T, Divider, IconButton, CssBaseline
+  Typography as T, Divider, IconButton, CssBaseline, Link
 } from '@material-ui/core';
 import { Home, Send, Info } from '@material-ui/icons';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import MenuIcon from '@material-ui/icons/Menu';
+import { withRouter } from "react-router-dom";
 
 
 const drawerWidth = 240;
@@ -16,6 +17,7 @@ const drawerItems = [
   {
     text: 'Home',
     icon: <Home/>,
+    href: '/#/'
   }, {
     text: 'About',
     icon: <Info/>
@@ -79,11 +81,16 @@ const useStyles = makeStyles(theme => ({
     }),
     marginLeft: 0,
   },
+  link : {
+    textDecoration: 'none',
+    color: theme.palette.text.primary,
+  }
 }));
 
 function AppBarDrawer() {
   const classes = useStyles();
   const theme = useTheme();
+  console.log(theme)
   const [open, setOpen] = React.useState(false);
 
   function handleDrawerOpen() {
@@ -134,10 +141,12 @@ function AppBarDrawer() {
         <List>
 
           {drawerItems.map((item) => (
-            <ListItem button key={item.text}>
+            <a href={item.href} key={item.text} className={classes.link}>
+            <ListItem button key={item.text} onClick={handleDrawerClose}>
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItem>
+            </a>
           ))}
         </List>
         <Divider />
@@ -147,5 +156,6 @@ function AppBarDrawer() {
     </div>
   );
 }
+
 
 export default AppBarDrawer;
