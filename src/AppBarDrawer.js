@@ -3,12 +3,11 @@ import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
   AppBar, Toolbar, Drawer, List, ListItem, ListItemIcon, ListItemText,
-  Typography as T, Divider, IconButton, CssBaseline, Link
+  Typography as T, Divider, IconButton, CssBaseline
 } from '@material-ui/core';
 import { Home, Send, Info } from '@material-ui/icons';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import MenuIcon from '@material-ui/icons/Menu';
-import { withRouter } from "react-router-dom";
 
 
 const drawerWidth = 240;

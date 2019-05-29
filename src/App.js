@@ -12,6 +12,8 @@ import {
   Grid, Card, CardHeader, CardMedia, CardActionArea
 } from '@material-ui/core'
 
+import SimpleBreadCrumbs from './BreadCrumbs.js'
+
 const useStyles = makeStyles(theme => ({
 
   grid : {
@@ -67,6 +69,7 @@ function App() {
 
   return (
     <div className="App">
+    <SimpleBreadCrumbs />
         <Grid container spacing={3} className={classes.grid}>
 
           {tileData.map(tile => (

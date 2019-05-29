@@ -6,14 +6,16 @@ import * as serviceWorker from './serviceWorker';
 import { Route, Switch, HashRouter as Router} from 'react-router-dom'
 import AppBarDrawer from './AppBarDrawer'
 
+import DataVis from './DataVis/DataVis.js'
 
-const DataVis = () => <h1>Data Visualisation</h1>
+
+// const DataVis = () => <h1>Data Visualisation</h1>
 const Images = () => <h1>Image Processing</h1>
 const FrontEnd = () => <h1>Front End</h1>
 const Notfound = () => <h1>Not found</h1>
 
 const routing = (
-  <div style={{'marginTop': '100px'}}>
+  <div style={{'marginTop': '60px'}}>
   <AppBarDrawer />
 
   <Router>
