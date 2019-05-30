@@ -1,39 +1,27 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import {
+  Typography as T, Paper,
+} from '@material-ui/core'
+
+import SingleLinGridList from '../SingleLineGridList.js'
+import SimpleBreadCrumbs from "../BreadCrumbs";
 
 import cma from './images/cma.png'
 import completion from './images/completion.png'
 import summary from './images/summary.png'
 
+import pdf_cover from './images/pdf_cover.png'
+import pdf_active from './images/pdf_active.png'
+import pdf_prog from './images/pdf_prog.png'
 
-import {
-  Typography as T,
-} from '@material-ui/core'
-
-import SingleLinGridList from '../SingleLineGridList.js'
-import Paper from "@material-ui/core/Paper";
-import SimpleBreadCrumbs from "../BreadCrumbs";
+import cli_cpd from './images/cli_cpd.png'
+import cli_sub from './images/cli_sub.png'
 
 const useStyles = makeStyles(theme => ({
   root: {
     margin: theme.spacing(2),
-  },
-  grid : {
-    padding: theme.spacing(4)
-  },
-  card: {
-    margin: theme.spacing(1),
-    textAlign: 'center',
-
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
-  },
-  link : {
-    textDecoration: 'none',
-    color: theme.palette.text.primary,
   },
   paper : {
     margin: theme.spacing(2),
@@ -41,25 +29,40 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const projects = [
+const spreadsheets = [
   {
     img: cma,
     title: 'Data visualisation',
-    language: 'React, Plotly, Django',
-    cols: 2,
-
   }, {
     img: completion,
     title: 'Image Processing',
-    language: 'MATLAB and Octave',
-    cols: 2,
-    href: '/#/images',
   }, {
     img: summary,
     title: 'Front End',
-    language: 'React',
-    cols: 2,
-    href: '/#/frontend',
+  }
+];
+
+const Pdfs = [
+  {
+    img: pdf_cover,
+    title: 'PDF cover',
+  }, {
+    img: pdf_active,
+    title: 'PDF active users',
+  }, {
+    img: pdf_prog,
+    title: 'PDF progress',
+  }
+];
+
+
+const Cli = [
+  {
+    img: cli_cpd,
+    title: 'Command line tool',
+  }, {
+    img: cli_sub,
+    title: 'Command line tool',
   }
 ];
 
@@ -72,10 +75,22 @@ function DataVis() {
         <SimpleBreadCrumbs />
         <div className={classes.root}>
 
-          <T variant='h3'>Data analysis and visualisation</T>
+          <T variant='h3'>Data analysis and reporting</T>
             <Paper className={classes.paper}>
               <T variant='h4'>Spreadsheets</T>
-              <SingleLinGridList tileData={projects} />
+              <T variant='body1'>Spreadsheets explanation here</T>
+              Include tools used
+              <SingleLinGridList tileData={spreadsheets} />
+            </Paper>
+
+            <Paper className={classes.paper}>
+              <T variant='h4'>PDF reporting</T>
+              <SingleLinGridList tileData={Pdfs} />
+            </Paper>
+
+          <Paper className={classes.paper}>
+              <T variant='h4'>Command line tools</T>
+              <SingleLinGridList tileData={Cli} />
             </Paper>
         </div>
       </div>
