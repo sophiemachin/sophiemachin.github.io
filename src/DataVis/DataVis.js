@@ -13,6 +13,7 @@ import {
 
 import SingleLinGridList from '../SingleLineGridList.js'
 import Paper from "@material-ui/core/Paper";
+import SimpleBreadCrumbs from "../BreadCrumbs";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -67,14 +68,17 @@ function DataVis() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-    <T variant='h3'>Data analysis and visualisation</T>
-      <Paper className={classes.paper}>
-        <T variant='h4'>Spreadsheets</T>
-      <SingleLinGridList tileData={projects} />
-      </Paper>
+      <div>
+        <SimpleBreadCrumbs />
+        <div className={classes.root}>
 
-    </div>
+          <T variant='h3'>Data analysis and visualisation</T>
+            <Paper className={classes.paper}>
+              <T variant='h4'>Spreadsheets</T>
+              <SingleLinGridList tileData={projects} />
+            </Paper>
+        </div>
+      </div>
   );
 }
 
