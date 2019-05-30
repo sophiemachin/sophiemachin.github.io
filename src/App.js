@@ -1,16 +1,14 @@
 import React from 'react';
 import './App.css';
 
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 
 import burgers from './images/burgers.jpg'
 import react from './images/react.png'
 import plotly from './images/plotly.png'
 import matlab from './images/matlab.jpg'
 
-import {
-  Grid, Card, CardHeader, CardMedia, CardActionArea
-} from '@material-ui/core'
+import {Card, CardActionArea, CardHeader, CardMedia, Grid} from '@material-ui/core'
 
 import SimpleBreadCrumbs from './BreadCrumbs.js'
 
@@ -28,11 +26,6 @@ const useStyles = makeStyles(theme => ({
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
-  link : {
-    textDecoration: 'none',
-    color: theme.palette.text.primary,
-  }
-
 }))
 
 const tileData = [
@@ -75,15 +68,12 @@ function App() {
           {tileData.map(tile => (
           <Grid item xs={12} sm={6} key={tile.href}>
             <Card className={classes.card}>
-            <CardActionArea>
-            <a href={tile.href} className={classes.link}>
+            <CardActionArea href={tile.href}>
               <CardHeader title={tile.title} subheader={tile.language}/>
-              
               <CardMedia
                 className={classes.media}
                 image={tile.img}
               />
-              </a>
               </CardActionArea>
 
             </Card>
