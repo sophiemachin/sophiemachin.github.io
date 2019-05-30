@@ -8,14 +8,16 @@ import summary from './images/summary.png'
 
 
 import {
-  Grid, Typography as T,
+  Typography as T,
 } from '@material-ui/core'
 
-
-import Example from './DataGallery'
+import SingleLinGridList from '../SingleLineGridList.js'
+import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles(theme => ({
-
+  root: {
+    margin: theme.spacing(2),
+  },
   grid : {
     padding: theme.spacing(4)
   },
@@ -31,8 +33,11 @@ const useStyles = makeStyles(theme => ({
   link : {
     textDecoration: 'none',
     color: theme.palette.text.primary,
-  }
-
+  },
+  paper : {
+    margin: theme.spacing(2),
+    padding: theme.spacing(2),
+  },
 }))
 
 const projects = [
@@ -62,13 +67,13 @@ function DataVis() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.root}>
     <T variant='h3'>Data analysis and visualisation</T>
-    <Grid container spacing={3} className={classes.grid}>
-    
-    <Example />
+      <Paper className={classes.paper}>
+        <T variant='h4'>Spreadsheets</T>
+      <SingleLinGridList tileData={projects} />
+      </Paper>
 
-    </Grid>
     </div>
   );
 }
