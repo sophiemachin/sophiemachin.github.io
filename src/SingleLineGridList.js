@@ -37,9 +37,8 @@ const useStyles = makeStyles(theme => ({
         justifyContent:'center',
       },
     modalImage : {
-        width: '100%',
-        height: 'auto',
-        maxWidth: '50vw',
+        maxWidth: '95vw',
+        maxHeight: '95vh',
       }
 }));
 
