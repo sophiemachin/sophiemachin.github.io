@@ -53,7 +53,6 @@ function SingleLineGridList({tileData}) {
     function handleModalOpen(image) {
       setImage(image)
       setOpen(true);
-      console.log(image)
     }
 
     function handleModalClose() {
