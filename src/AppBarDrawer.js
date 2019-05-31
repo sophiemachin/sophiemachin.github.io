@@ -1,11 +1,20 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import {
-  AppBar, Toolbar, Drawer, List, ListItem, ListItemIcon, ListItemText,
-  Typography as T, Divider, IconButton, CssBaseline
+    AppBar,
+    CssBaseline,
+    Divider,
+    Drawer,
+    IconButton,
+    List,
+    ListItem,
+    ListItemIcon,
+    ListItemText,
+    Toolbar,
+    Typography as T
 } from '@material-ui/core';
-import { Home, Send, Info } from '@material-ui/icons';
+import {Home, Info, Send} from '@material-ui/icons';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -46,6 +55,7 @@ const useStyles = makeStyles(theme => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    color: theme.palette.text.tertiary,
   },
   hide: {
     display: 'none',
@@ -83,6 +93,10 @@ const useStyles = makeStyles(theme => ({
   link : {
     textDecoration: 'none',
     color: theme.palette.text.primary,
+  },
+  homeButton : {
+    textDecoration: 'none',
+    color: theme.palette.text.tertiary,
   }
 }));
 
@@ -133,7 +147,9 @@ function AppBarDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <T variant="body1">Sophie Machin: portfolio</T>
+          <a href='/#/' className={classes.homeButton}>
+            <T variant="body1">Sophie Machin: portfolio</T>
+          </a>
         </Toolbar>
       </AppBar>
       <Drawer
