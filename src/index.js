@@ -18,7 +18,8 @@ const Notfound = () => <h1>Not found</h1>
 const theme = createMuiTheme({
   palette: {
     text: {
-      primary: "rgba(0, 0, 0, 0.67)"
+      primary: "rgba(0, 0, 0, 0.67)",
+      tertiary : "rgba(255, 255, 255, 0.85)",
     }
   },
 });
