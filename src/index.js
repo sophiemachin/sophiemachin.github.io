@@ -3,19 +3,29 @@ import ReactDOM from 'react-dom'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { Route, Switch, HashRouter as Router} from 'react-router-dom'
+import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 import AppBarDrawer from './AppBarDrawer'
 
 import DataVis from './DataVis/DataVis.js'
 
+import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles';
 
-// const DataVis = () => <h1>Data Visualisation</h1>
 const Images = () => <h1>Image Processing</h1>
 const FrontEnd = () => <h1>Front End</h1>
 const Notfound = () => <h1>Not found</h1>
 
+
+const theme = createMuiTheme({
+  palette: {
+    text: {
+      primary: "rgba(0, 0, 0, 0.67)"
+    }
+  },
+});
+
 const routing = (
   <div style={{'marginTop': '60px'}}>
+    <MuiThemeProvider theme={theme}>
   <AppBarDrawer />
 
   <Router>
@@ -27,6 +37,7 @@ const routing = (
       <Route component={Notfound} />
     </Switch>
   </Router>
+    </MuiThemeProvider>
   </div>
 )
 
