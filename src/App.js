@@ -10,10 +10,10 @@ import matlab from './images/matlab.jpg'
 
 import {Card, CardActionArea, CardHeader, CardMedia, Grid} from '@material-ui/core'
 
-import SimpleBreadCrumbs from './BreadCrumbs.js'
-
 const useStyles = makeStyles(theme => ({
-
+  root: {
+    padding: '20px',
+  },
   grid : {
     padding: theme.spacing(4)
   },
