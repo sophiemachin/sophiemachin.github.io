@@ -3,7 +3,6 @@ import {makeStyles} from '@material-ui/core/styles';
 import {GridList} from '@material-ui/core';
 import GridListTile from '@material-ui/core/GridListTile';
 import Modal from '@material-ui/core/Modal'
-import Dialog from '@material-ui/core/Dialog'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -28,6 +27,7 @@ const useStyles = makeStyles(theme => ({
     },
     img: {
         cursor: 'pointer',
+        padding: theme.spacing(2)
     },
     modalPaper: {
         margin: 'auto'
