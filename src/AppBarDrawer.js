@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar, Toolbar, Drawer, List, ListItem, ListItemIcon, ListItemText,
   Typography as T, Divider, IconButton, CssBaseline
@@ -88,7 +88,7 @@ const useStyles = makeStyles(theme => ({
 
 function AppBarDrawer() {
   const classes = useStyles();
-  const theme = useTheme();
+  const node = React.useRef();
 
   const [open, setOpen] = React.useState(false);
 
@@ -100,8 +100,22 @@ function AppBarDrawer() {
     setOpen(false);
   }
 
+  const handleClick = e => {
+    if (node.current.contains(e.target)) {
+      // inside click
+      return;
+    }
+    // outside click
+    setOpen(false);
+  };
+
+
+  React.useEffect(() =>
+    document.addEventListener("mousedown", handleClick)
+  );
+
   return (
-    <div className={classes.root}>
+    <div className={classes.root} ref={node}>
       <CssBaseline />
       <AppBar
         position="fixed"
