@@ -3,6 +3,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import {GridList} from '@material-ui/core';
 import GridListTile from '@material-ui/core/GridListTile';
 import Modal from '@material-ui/core/Modal'
+import Dialog from '@material-ui/core/Dialog'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -62,7 +63,7 @@ function SingleLineGridList({tileData}) {
     return (
         <div className={classes.root}>
           <Modal open={open} onClose={handleModalClose} className={classes.modal}>
-                <img src={image} alt='Modal image' className={classes.modalImage}/>
+                <img src={image} alt='Modal' className={classes.modalImage}/>
           </Modal>
             <GridList className={classes.gridList} cols={2.5}>
                 {tileData.map(tile => (
