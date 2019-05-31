@@ -61,7 +61,7 @@ function App() {
   const classes = useStyles();
 
   return (
-    <div className="App">
+    <div className={classes.root}>
     <SimpleBreadCrumbs />
         <Grid container spacing={3} className={classes.grid}>
 
