@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
         flexWrap: 'nowrap',
         // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
         transform: 'translateZ(0)',
-        paddingTop: theme.spacing(2)
+        paddingTop: theme.spacing(2),
     },
     title: {
         color: theme.palette.primary.contrastText,
@@ -38,8 +38,8 @@ const useStyles = makeStyles(theme => ({
         justifyContent:'center',
       },
     modalImage : {
-        maxWidth: '95vw',
-        maxHeight: '95vh',
+        maxWidth: '90vw',
+        maxHeight: '90vh',
       }
 }));
 
