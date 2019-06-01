@@ -13,6 +13,8 @@ import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles';
 const Images = () => <h1>Image Processing</h1>
 const FrontEnd = () => <h1>Front End</h1>
 const Notfound = () => <h1>Not found</h1>
+const Workflow = () => <h1>Workflow</h1>
+const About = () => <h1>About</h1>
 
 
 const theme = createMuiTheme({
@@ -35,6 +37,8 @@ const routing = (
       <Route path="/data" exact component={DataVis} />
       <Route path="/images" exact component={Images} />
       <Route path="/frontend" exact component={FrontEnd} />
+      <Route path="/workflow" exact component={Workflow} />
+      <Route path="/about" exact component={About} />
       <Route component={Notfound} />
     </Switch>
   </Router>
