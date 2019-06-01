@@ -2,17 +2,17 @@ import React from 'react';
 import clsx from 'clsx';
 import {makeStyles} from '@material-ui/core/styles';
 import {
-    AppBar,
-    CssBaseline,
-    Divider,
-    Drawer,
-    IconButton,
-    List,
-    ListItem,
-    ListItemIcon,
-    ListItemText,
-    Toolbar,
-    Typography as T
+  AppBar,
+  CssBaseline,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Toolbar,
+  Typography as T
 } from '@material-ui/core';
 import {Home, Info, Send} from '@material-ui/icons';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -28,9 +28,11 @@ const drawerItems = [
     href: '/#/'
   }, {
     text: 'About',
+    href: '/#/about',
     icon: <Info/>
   }, {
     text: 'Contact',
+    href: '/#/contact',
     icon: <Send />
 }
 ]
