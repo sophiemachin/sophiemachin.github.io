@@ -5,7 +5,6 @@ import {makeStyles} from '@material-ui/core/styles';
 
 import {Card, CardActionArea, CardHeader, Grid} from '@material-ui/core'
 
-import SimpleBreadCrumbs from "./BreadCrumbs";
 import Avatar from "@material-ui/core/Avatar";
 
 const tileData = [
@@ -91,7 +90,6 @@ function App() {
 
   return (
     <div className={classes.root}>
-    <SimpleBreadCrumbs />
         <Grid container spacing={3} className={classes.grid}>
 
           {tileData.map(tile => (

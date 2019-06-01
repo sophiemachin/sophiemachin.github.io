@@ -1,12 +1,9 @@
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
-import {
-  Typography as T, Paper,
-} from '@material-ui/core'
+import {makeStyles} from '@material-ui/core/styles';
+import {Paper, Typography as T,} from '@material-ui/core'
 
 import SingleLinGridList from '../SingleLineGridList.js'
-import SimpleBreadCrumbs from "../BreadCrumbs";
 
 import cma from './images/cma.png'
 import completion from './images/completion.png'
@@ -72,14 +69,11 @@ function DataVis() {
 
   return (
       <div>
-        <SimpleBreadCrumbs />
         <div className={classes.root}>
 
           <T variant='h3'>Data analysis and reporting</T>
             <Paper className={classes.paper}>
               <T variant='h4'>Spreadsheets</T>
-              <T variant='body1'>Spreadsheets explanation here</T>
-              Include tools used
               <SingleLinGridList tileData={spreadsheets} />
             </Paper>
 
