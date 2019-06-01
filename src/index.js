@@ -15,6 +15,7 @@ const FrontEnd = () => <h1>Front End</h1>
 const Notfound = () => <h1>Not found</h1>
 const Workflow = () => <h1>Workflow</h1>
 const About = () => <h1>About</h1>
+const Contact = () => <h1>Contact</h1>
 
 
 const theme = createMuiTheme({
@@ -39,6 +40,7 @@ const routing = (
       <Route path="/frontend" exact component={FrontEnd} />
       <Route path="/workflow" exact component={Workflow} />
       <Route path="/about" exact component={About} />
+      <Route path="/contact" exact component={Contact} />
       <Route component={Notfound} />
     </Switch>
   </Router>
