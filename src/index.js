@@ -8,14 +8,59 @@ import AppBarDrawer from './AppBarDrawer'
 
 import DataVis from './DataVis/DataVis.js'
 
-import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles';
+import {createMuiTheme, makeStyles, MuiThemeProvider} from '@material-ui/core/styles';
 
-const Images = () => <h1>Image Processing</h1>
-const FrontEnd = () => <h1>Front End</h1>
-const Notfound = () => <h1>Not found</h1>
-const Workflow = () => <h1>Workflow</h1>
-const About = () => <h1>About</h1>
-const Contact = () => <h1>Contact</h1>
+import {Card, CardActionArea, CardHeader, Typography as T,} from '@material-ui/core';
+import Avatar from "@material-ui/core/Avatar";
+import Grid from "@material-ui/core/Grid";
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    margin: theme.spacing(2),
+  },
+  content : {
+    display:'flex',
+    height: '50vh',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  card: {
+    margin: theme.spacing(1),
+    // textAlign: 'center',
+  },
+  avatar:{
+    margin : theme.spacing(0.5),
+  },
+}))
+
+
+function SkeletonPage({page}) {
+  const classes = useStyles();
+  return <div className={classes.root}>
+    <T variant='h3'>{page}</T>
+    <div className={classes.content}>
+      <Card className={classes.card}>
+        <CardActionArea >
+          <CardHeader title='Coming soon'
+                      subheader='This section is still under construction'/>
+            <Grid container justify="center" alignItems="center">
+              <Avatar className={classes.avatar}>
+                <i className='fas fa-tools'/>
+              </Avatar>
+            </Grid>
+
+        </CardActionArea>
+      </Card>
+    </div>
+  </div>
+}
+
+const Images    = () => <SkeletonPage page='Image Processing'/>;
+const FrontEnd  = () => <SkeletonPage page='Front End'/>;
+const Notfound  = () => <SkeletonPage page='Not found'/>;
+const Workflow  = () => <SkeletonPage page='Workflow'/>;
+const About     = () => <SkeletonPage page='About'/>;
+const Contact   = () => <SkeletonPage page='Contact'/>;
 
 
 const theme = createMuiTheme({
