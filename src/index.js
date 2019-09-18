@@ -11,6 +11,7 @@ import {createMuiTheme, makeStyles, MuiThemeProvider} from '@material-ui/core/st
 import {Card, CardActionArea, CardHeader, Typography as T,} from '@material-ui/core';
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
+import Contact from "./Contact"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -55,7 +56,6 @@ function SkeletonPage({page}) {
 
 const Notfound  = () => <SkeletonPage page='Not found'/>;
 const About     = () => <SkeletonPage page='About'/>;
-const Contact   = () => <SkeletonPage page='Contact'/>;
 
 
 const theme = createMuiTheme({
