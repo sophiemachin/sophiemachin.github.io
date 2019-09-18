@@ -17,8 +17,8 @@ const useStyles = makeStyles(theme => ({
   },
   card: {
     margin: theme.spacing(1),
-    // textAlign: 'center',
     maxWidth: '600px',
+    minWidth: '250px',
   },
   avatar:{
     margin : theme.spacing(0.5),
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'left',
   },
   textField : {
-    minWidth:'400px',
+    minWidth:'250px',
     margin: '5px',
   },
   success : {
@@ -45,8 +45,6 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
   }
-
-
 }));
 
 
@@ -119,15 +117,17 @@ function Contact() {
           label="Message"
           required
         />
+        <Button
+          className={classes.textField}
+          variant='contained'
+          color='primary'
+          onClick={handleSubmit}
+          disabled={!feedback}
+        >
+          Submit
+        </Button>
       </div>
-      <Button
-        variant='contained'
-        color='primary'
-        onClick={handleSubmit}
-        disabled={!feedback}
-      >
-        Submit
-      </Button>
+
     </form>
   }
 
