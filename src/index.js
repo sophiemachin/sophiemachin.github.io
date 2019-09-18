@@ -6,8 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 import AppBarDrawer from './AppBarDrawer'
 
-import DataVis from './DataVis/DataVis.js'
-
 import {createMuiTheme, makeStyles, MuiThemeProvider} from '@material-ui/core/styles';
 
 import {Card, CardActionArea, CardHeader, Typography as T,} from '@material-ui/core';
@@ -55,10 +53,7 @@ function SkeletonPage({page}) {
   </div>
 }
 
-const Images    = () => <SkeletonPage page='Image Processing'/>;
-const FrontEnd  = () => <SkeletonPage page='Front End'/>;
 const Notfound  = () => <SkeletonPage page='Not found'/>;
-const Workflow  = () => <SkeletonPage page='Workflow'/>;
 const About     = () => <SkeletonPage page='About'/>;
 const Contact   = () => <SkeletonPage page='Contact'/>;
 
@@ -80,10 +75,6 @@ const routing = (
   <Router>
     <Switch>
       <Route path="/" exact component={App} />
-      <Route path="/data" exact component={DataVis} />
-      <Route path="/images" exact component={Images} />
-      <Route path="/frontend" exact component={FrontEnd} />
-      <Route path="/workflow" exact component={Workflow} />
       <Route path="/about" exact component={About} />
       <Route path="/contact" exact component={Contact} />
       <Route component={Notfound} />
