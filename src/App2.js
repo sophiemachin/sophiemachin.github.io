@@ -3,7 +3,7 @@ import './App.css';
 
 import {makeStyles} from '@material-ui/core/styles';
 
-import {Card, CardHeader, Grid} from '@material-ui/core'
+import {Card, CardHeader, Grid, Typography as T} from '@material-ui/core'
 import Button from "@material-ui/core/Button";
 import CardContent from "@material-ui/core/CardContent";
 import book_text from './images/book_text.jpg'
@@ -19,7 +19,7 @@ const tileData = [
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: '20px',
+    // padding: '20px',
   },
   grid : {
     padding: theme.spacing(4)
@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
     // flexWrap: 'wrap',
   },
   cardText : {
-    padding: '20px',
+    padding: '0px 20px 0px 20px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -62,8 +62,11 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center'
   },
   button : {
-    padding: '10px',
+    padding: '5px',
     display: 'flex',
+  },
+  textBox: {
+    textAlign: 'left'
   }
 }))
 
@@ -85,7 +88,7 @@ function App() {
             <CardContent>
               <div className={classes.cardContent}>
                 <Grid container >
-                <Grid item xs={12} sm={6} m={4}>
+                <Grid item xs={12} sm={5} md={4}>
                   <div className={classes.mediaContainer}>
                     <CardMedia className={classes.media} src='./images/book_text.jpg'>
                       <img
@@ -96,23 +99,33 @@ function App() {
                     </CardMedia>
                   </div>
                 </Grid>
-                <Grid item xs={12} sm={6} m={8}>
+                <Grid item xs={12} sm={7} md={8}>
 
                   <div className={classes.cardText}>
                     <div>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nulla non sollicitudin turpis, a consectetur purus. Integer
-                      vitae velit vel leo porttitor vehicula pulvinar nec augue.
+                      <T varaint='body1' gutterBottom>
+                        A small, single-page language processing app
+                      </T>
+                      <div className={classes.textBox}>
+                        <T variant='body1' gutterBottom>
+                          Front end: React and Material-UI
+                        </T>
+                      </div>
+                      <div className={classes.textBox}>
+                        <T variant='body1' gutterBottom>
+                          Back end: Python and Natural Language Processing Toolkit
+                        </T>
+                      </div>
                     </div>
                     <div className={classes.cardButtons}>
                       <div className={classes.button}>
                         <Button variant='outlined' href={frontendUrl}>
-                          Link to app
+                          View
                         </Button>
                       </div>
                       <div className={classes.button}>
                         <Button variant='outlined' href={frontendUrl}>
-                          View on GitHub
+                          GitHub
                         </Button>
                       </div>
                     </div>
