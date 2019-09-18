@@ -1,3 +1,4 @@
+import React from "react";
 import book_text from "./images/book_text.jpg";
 import gateway from "./images/gateway.png"
 import fitbit from "./images/fitbit.png"
@@ -5,11 +6,13 @@ import fitbit from "./images/fitbit.png"
 
 const Portfolios = [{
   title: 'Language processing app',
-  subheader: 'A small, single-page language processing app',
+  subheader: 'A single-page language processing app',
   img : book_text,
   imgAlt : "Text from a book",
   text : [
-    'Front end: React and Material-UI',
+    'Text is entered using a single-page app, which is uploaded to a ' +
+    'server. The server analyses the text and returns the results.',
+    `Front end: React`,
     'Back end: Python and Natural Language Processing Toolkit',
   ],
   frontEndUrl: "https://sophiemachin.github.io/wordcounter_frontend/",
@@ -19,8 +22,8 @@ const Portfolios = [{
   subheader: 'A gateway for doctors to view patient data',
   img : gateway,
   text : [
-    "A frontend-only app for displaying large amounts of data. Built using " +
-    "React and Material-UI.",
+    "A frontend-only app for displaying large amounts of data.",
+    "Front end: React",
   ],
   frontEndUrl: "https://sophiemachin.github.io/gateway/",
   githubUrl: "",
@@ -29,7 +32,7 @@ const Portfolios = [{
   subheader: 'A tool for improved Fitbit data visualisation',
   img : fitbit,
   text : [
-    "A data visualisation tool for tracking data generated using Fitbit and the Aria2 scales.",
+    "A visualisation tool for tracking data generated using Fitbit and the Aria2 scales.",
     "Front end: React",
     "Data processing: Python",
     "Data visualisation: Plotly",
