@@ -1,4 +1,3 @@
-import React from "react";
 import book_text from "./images/book_text.jpg";
 import gateway from "./images/gateway.png"
 import fitbit from "./images/fitbit.png"
