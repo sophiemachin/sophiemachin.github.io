@@ -19,7 +19,7 @@ const Portfolios = [{
   subheader: 'A gateway for doctors to view patient data',
   img : gateway,
   text : [
-    "A frontend-only app for displaying large amounts of data. Built using" +
+    "A frontend-only app for displaying large amounts of data. Built using " +
     "React and Material-UI.",
   ],
   frontEndUrl: "https://sophiemachin.github.io/gateway/",
