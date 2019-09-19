@@ -15,7 +15,7 @@ const Portfolios = [{
     'Back end: Python and Natural Language Processing Toolkit',
   ],
   frontEndUrl: "https://sophiemachin.github.io/wordcounter_frontend/",
-  githubUrl: "",
+  githubUrl: "https://github.com/sophiemachin/flaskapp",
 }, {
   title: 'Patient gateway app',
   subheader: 'A gateway for doctors to view patient data',
@@ -25,7 +25,7 @@ const Portfolios = [{
     "Front end: React",
   ],
   frontEndUrl: "https://sophiemachin.github.io/gateway/",
-  githubUrl: "",
+  githubUrl: "https://github.com/sophiemachin/gateway",
 }, {
   title: 'Data visualisation app',
   subheader: 'A tool for improved Fitbit data visualisation',
