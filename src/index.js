@@ -8,11 +8,10 @@ import AppBarDrawer from './AppBarDrawer'
 
 import {createMuiTheme, makeStyles, MuiThemeProvider} from '@material-ui/core/styles';
 
-import {BottomNavigation, Card, CardActionArea, CardHeader, Typography as T,} from '@material-ui/core';
+import {Card, CardActionArea, CardHeader, Typography as T} from '@material-ui/core';
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import Contact from "./Contact"
-import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -81,21 +80,21 @@ const routing = (
         <Route component={Notfound} />
       </Switch>
     </Router>
-    <BottomNavigation>
-      <div style={{display: 'flex', margin:'auto'}}>
-      <i className="far fa-copyright" style={{padding:'5px', margin:'auto'}}/>
-      <T style={{margin:'auto'}} variant='caption'>
-        Copyright Sophie Machin 2019
-      </T>
-      <Button
-        href='https://github.com/sophiemachin'
-        style={{marginLeft:'20px'}}
-      >
-        <i className="fab fa-github" style={{padding:'5px'}}/>
-        Github
-      </Button>
-      </div>
-    </BottomNavigation>
+    {/*<BottomNavigation>*/}
+    {/*  <div style={{display: 'flex', margin:'auto'}}>*/}
+    {/*  <i className="far fa-copyright" style={{padding:'5px', margin:'auto'}}/>*/}
+    {/*  <T style={{margin:'auto'}} variant='caption'>*/}
+    {/*    Copyright Sophie Machin 2019*/}
+    {/*  </T>*/}
+    {/*  <Button*/}
+    {/*    href='https://github.com/sophiemachin'*/}
+    {/*    style={{marginLeft:'20px'}}*/}
+    {/*  >*/}
+    {/*    <i className="fab fa-github" style={{padding:'5px'}}/>*/}
+    {/*    Github*/}
+    {/*  </Button>*/}
+    {/*  </div>*/}
+    {/*</BottomNavigation>*/}
     </MuiThemeProvider>
   </div>
 )
