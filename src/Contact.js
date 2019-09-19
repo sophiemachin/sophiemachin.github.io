@@ -137,8 +137,8 @@ function Contact() {
         <CardHeader title='Get in touch!' />
         <CardContent >
           <T variant='body1'>If you're interested in a collaboration or want
-            to use one of my projects, I'd love to hear from you. If you're
-            expecting a reply please leave your email address.
+            to use one of my projects, I'd love to hear from you. Leave your
+            name and email below.
           </T>
 
         <Grid container justify="center" alignItems="center">
