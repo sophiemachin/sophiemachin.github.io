@@ -1,23 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.2cce8147.chunk.css",
-    "main.js": "/static/js/main.c3a2b236.chunk.js",
-    "main.js.map": "/static/js/main.c3a2b236.chunk.js.map",
+    "main.js": "/static/js/main.a5c70219.chunk.js",
+    "main.js.map": "/static/js/main.a5c70219.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.ba92b84e.chunk.js": "/static/js/2.ba92b84e.chunk.js",
-    "static/js/2.ba92b84e.chunk.js.map": "/static/js/2.ba92b84e.chunk.js.map",
+    "static/js/2.39b943bc.chunk.js": "/static/js/2.39b943bc.chunk.js",
+    "static/js/2.39b943bc.chunk.js.map": "/static/js/2.39b943bc.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.51239b10cebb5a3afe5ac66284b411c9.js": "/precache-manifest.51239b10cebb5a3afe5ac66284b411c9.js",
+    "precache-manifest.e0762b36743eba9bbb09c371a00df21d.js": "/precache-manifest.e0762b36743eba9bbb09c371a00df21d.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.2cce8147.chunk.css.map": "/static/css/main.2cce8147.chunk.css.map",
-    "static/media/cli_cpd.png": "/static/media/cli_cpd.9a07d610.png",
-    "static/media/cli_sub.png": "/static/media/cli_sub.d5fc2139.png",
-    "static/media/cma.png": "/static/media/cma.8c5ccf27.png",
-    "static/media/completion.png": "/static/media/completion.9220289b.png",
-    "static/media/pdf_active.png": "/static/media/pdf_active.49a9765d.png",
-    "static/media/pdf_cover.png": "/static/media/pdf_cover.4c862579.png",
-    "static/media/pdf_prog.png": "/static/media/pdf_prog.754219e3.png",
-    "static/media/summary.png": "/static/media/summary.902fc4a8.png"
+    "static/media/book_text.jpg": "/static/media/book_text.53313658.jpg",
+    "static/media/fitbit.png": "/static/media/fitbit.172481a2.png",
+    "static/media/gateway.png": "/static/media/gateway.ee4c85c0.png"
   }
 }
